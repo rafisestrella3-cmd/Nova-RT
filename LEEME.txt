@@ -1,0 +1,28 @@
+RESPALDO DE NOVA (IA local)
+
+Este folder es una "imagen" de todo lo que se instaló:
+  - modelo Ollama qwen2.5:3b (1.8 GB)
+  - librerías y ejecutable de Ollama
+  - buscador Nova (~/Nova/Nova.sh)
+  - servicio de systemd que mantiene el modelo activo
+  - yt-dlp para reproducir música
+
+CÓMO VOLVER A TENERLO
+
+  1. Abrí una terminal acá (Respaldo-Nova).
+  2. Escribí:  ./RESTAURAR.sh
+  3. Cuando termine, abrí Nova con:  ~/Nova/Nova.sh
+
+No necesitás internet ni volver a descargar nada: el modelo ya está adentro
+del archivo nova-completo.tar.zst.
+
+Si algún día querés borrarlo otra vez, eliminá estas rutas:
+  ~/.local/bin/ollama
+  ~/.local/lib/ollama
+  ~/.local/share/ollama
+  ~/.local/share/assistant
+  ~/.local/bin/yt-dlp
+  ~/.config/systemd/user/ollama.service
+  ~/.config/systemd/user/default.target.wants/ollama.service
+  ~/Nova
+...y este folder si ya no querés el respaldo.
